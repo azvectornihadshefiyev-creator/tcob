@@ -7,7 +7,7 @@
 <title>Travel Center of Baku</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap">
 <style>
-:root{color-scheme:dark;--bg:#07090c;--g1:#0d1117;--g2:#131a23;--ink:#f1f4f8;--mut:#a3b3c5;--line:rgba(255,255,255,.1);--sky:#38BDF8;--deep:#0284C7;--steel:#5B8AC6;--pink:#D91E63;--gold:#D4AF37;--ivory:#f4f1ea;--d:Inter,"Segoe UI",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{color-scheme:dark;--bg:#081321;--g1:#0e1b2e;--g2:#162840;--ink:#f1f4f8;--mut:#a3b3c5;--line:rgba(255,255,255,.1);--sky:#38BDF8;--deep:#0284C7;--steel:#5B8AC6;--pink:#D91E63;--gold:#D4AF37;--ivory:#f4f1ea;--d:Inter,"Segoe UI",system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
 *{box-sizing:border-box;margin:0}
 html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
@@ -18,11 +18,20 @@ h2{font-size:clamp(28px,4.4vw,48px);margin-bottom:22px}
 h3{font-size:22px}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 .kick{font:700 13px Inter,"Segoe UI",system-ui,sans-serif;letter-spacing:.01em;color:var(--sky)}
-.mesh{position:fixed;inset:0;z-index:-1;background:var(--bg);overflow:hidden}
-.mesh i{position:absolute;width:56vmax;height:56vmax;border-radius:50%;filter:blur(110px);opacity:.22;animation:mv 30s ease-in-out infinite alternate}
-.mesh i:nth-child(1){background:var(--deep);left:-20vmax;top:-14vmax}
-.mesh i:nth-child(2){background:var(--pink);right:-26vmax;top:40vh;opacity:.1;animation-delay:-12s}
-@keyframes mv{to{transform:translate(8vmax,6vmax) scale(1.18)}}
+.mesh{position:fixed;inset:0;z-index:-2;background:var(--bg);overflow:hidden}
+.mesh i{position:absolute;width:60vmax;height:60vmax;border-radius:50%;filter:blur(90px);opacity:.42;transition:background 1.6s;animation:mv 24s ease-in-out infinite alternate}
+.mesh i:nth-child(1){background:var(--m1);left:-18vmax;top:-14vmax}
+.mesh i:nth-child(2){background:var(--m2);right:-22vmax;top:25vh;animation-duration:31s;animation-delay:-9s;opacity:.3}
+.mesh i:nth-child(3){background:var(--m3);left:10vw;bottom:-30vmax;animation-duration:37s;animation-delay:-17s;opacity:.26}
+.mesh i:nth-child(4){background:var(--m4);right:15vw;top:-20vmax;width:42vmax;height:42vmax;animation-duration:27s;animation-delay:-5s;opacity:.32}
+@keyframes mv{0%{transform:translate(0,0) scale(1)}50%{transform:translate(12vmax,8vmax) scale(1.25)}100%{transform:translate(-6vmax,14vmax) scale(.95)}}
+body{--m1:#0284C7;--m2:#D91E63;--m3:#D4AF37;--m4:#38BDF8}
+body[data-p=visa]{--m1:#0284C7;--m2:#D4AF37;--m3:#38BDF8;--m4:#5B8AC6}
+body[data-p=tours]{--m1:#D91E63;--m2:#0284C7;--m3:#38BDF8;--m4:#D4AF37}
+body[data-p=partners]{--m1:#5B8AC6;--m2:#38BDF8;--m3:#D91E63;--m4:#0284C7}
+body[data-p=about]{--m1:#D4AF37;--m2:#0284C7;--m3:#D91E63;--m4:#5B8AC6}
+body[data-p=contact]{--m1:#D91E63;--m2:#38BDF8;--m3:#0284C7;--m4:#D4AF37}
+body[data-p=advertise]{--m1:#38BDF8;--m2:#D91E63;--m3:#D4AF37;--m4:#0284C7}
 #cu1,#cu2{position:fixed;left:0;top:0;z-index:300;pointer-events:none;display:none}
 body.cc #cu1,body.cc #cu2{display:block}
 #cu1 b{display:block;width:6px;height:6px;margin:-3px;border-radius:50%;background:#fff}
@@ -132,10 +141,10 @@ nav a.on{color:#fff;border-color:var(--gold)}
 .rev{margin-top:12px;padding:16px 18px;border-left:2px solid var(--pink);background:rgba(255,255,255,.04);border-radius:0 12px 12px 0}
 .fl{position:relative;margin:10px 0}
 .fl label{position:absolute;left:16px;top:16px;color:var(--mut);font-size:15px;transition:.25s;pointer-events:none}
-.fl input:focus+label,.fl input:not(:placeholder-shown)+label,.fl textarea:focus+label,.fl textarea:not(:placeholder-shown)+label{top:-8px;font-size:13px;letter-spacing:.01em;background:#0d1117;padding:0 8px;color:var(--sky)}
+.fl input:focus+label,.fl input:not(:placeholder-shown)+label,.fl textarea:focus+label,.fl textarea:not(:placeholder-shown)+label{top:-8px;font-size:13px;letter-spacing:.01em;background:#0e1b2e;padding:0 8px;color:var(--sky)}
 input,select,textarea{width:100%;padding:16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--ink);font:inherit;outline:0;transition:.3s;margin:0}
 input:focus,select:focus,textarea:focus{border-color:var(--sky);box-shadow:0 0 0 3px rgba(56,189,248,.14),0 0 28px rgba(56,189,248,.35)}
-select option{background:#0d1117}
+select option{background:#0e1b2e}
 .sl{display:block;font:700 13px Inter,"Segoe UI",system-ui,sans-serif;letter-spacing:.01em;color:var(--mut);margin:14px 0 6px}
 .stats{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
 .stats .card{text-align:center}
@@ -148,9 +157,9 @@ select option{background:#0d1117}
 .ov,.lb{position:fixed;inset:0;display:none;place-items:center;background:rgba(3,5,8,.82);backdrop-filter:blur(14px);padding:14px}
 .ov{z-index:100}.lb{z-index:150}
 .ov.on,.lb.on{display:grid}
-.panel{width:min(680px,100%);max-height:92vh;overflow:auto;background:#0b1017;border:1px solid var(--line);border-radius:28px;padding:30px;position:relative;animation:pop .7s cubic-bezier(.2,1.3,.4,1)}
+.panel{width:min(680px,100%);background:linear-gradient(160deg,#17305a,#0a1424);border:1px solid var(--line);border-radius:28px;position:relative;overflow:hidden;animation:pop .7s cubic-bezier(.2,1.3,.4,1);box-shadow:0 50px 100px -30px #000,0 0 90px rgba(56,189,248,.22)}.pin{max-height:92vh;overflow:auto;padding:30px;counter-reset:st}
 @keyframes pop{from{transform:translateY(70px) rotateX(20deg) scale(.94);opacity:0}}
-.x{position:absolute;right:18px;top:12px;background:none;border:0;font-size:32px;color:var(--ink)}
+.x{position:absolute;z-index:4;right:18px;top:12px;background:none;border:0;font-size:32px;color:var(--ink)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
 .segs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .seg{border-radius:16px;text-align:left;white-space:normal;letter-spacing:0;text-transform:none;padding:14px}
@@ -179,17 +188,45 @@ select option{background:#0d1117}
 footer{margin-top:110px;border-top:1px solid var(--line);color:var(--mut);padding:40px 0 calc(48px + env(safe-area-inset-bottom,0px));font-size:13px}
 @media(max-width:640px){header{flex-wrap:wrap}.lg small{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.panel::before,#sup::before,.card::before,.tc::before,.bn::before,.l3::before,.pass::before,.vip::before,.ivory::before,.lb .z::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:2px;background:conic-gradient(from var(--a),transparent 0 60%,var(--sky) 74%,#fff 87%,var(--pink) 96%,transparent);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);mask-composite:exclude;animation:eg 6s linear infinite;pointer-events:none;z-index:3}
+@keyframes eg{to{--a:360deg}}
+.vip::before{background:conic-gradient(from var(--a),transparent 0 55%,var(--gold) 72%,#fff 86%,var(--gold) 95%,transparent)}
+.ivory::before,.pass::before{background:conic-gradient(from var(--a),transparent 0 58%,var(--deep) 76%,var(--pink) 92%,transparent)}
+.tc:nth-child(2n)::before,.bn:nth-child(2n)::before{animation-delay:-2.2s}.tc:nth-child(3n)::before,.card:nth-child(2n)::before{animation-delay:-4s;animation-direction:reverse}
+.vip,.ivory,.lb .z{position:relative}
+.sec>h2::after{content:"";display:block;height:3px;margin-top:14px;border-radius:3px;background:linear-gradient(90deg,var(--sky),var(--pink));animation:ln 3.2s ease-in-out infinite alternate}
+@keyframes ln{from{width:70px}to{width:190px}}
+.sl{display:flex;align-items:center}
+.sl::before{counter-increment:st;content:counter(st);display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--sky);color:#06101c;font-weight:800;margin-right:10px}
+.dotg{width:9px;height:9px;border-radius:50%;background:#25D366;animation:pl 1.4s infinite}
+.tcob .s2{stroke:url(#g2);animation-duration:12s;animation-direction:reverse;stroke-dasharray:180 1600}
+.mq{overflow:hidden;border-block:1px solid var(--line);padding:20px 0;margin:40px 0 0;background:linear-gradient(90deg,rgba(56,189,248,.1),rgba(217,30,99,.1),rgba(212,175,55,.1))}
+.mq>div{display:flex;width:max-content;animation:mqm 40s linear infinite}
+.mq span{display:flex;align-items:center;gap:48px;padding-right:48px;font:600 26px var(--d);white-space:nowrap;color:#e2eefa}
+.mq span::after{content:"✦";color:var(--gold);font-size:18px}
+@keyframes mqm{to{transform:translateX(-50%)}}
+.ph .wrap{position:relative}
+.orb{position:absolute;right:20px;top:-30px;width:210px;height:210px;perspective:700px;pointer-events:none}
+.orb i{position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--c);box-shadow:0 0 22px rgba(56,189,248,.25),inset 0 0 22px rgba(56,189,248,.12)}
+.orb i::after{content:"";position:absolute;top:-5px;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#fff;box-shadow:0 0 14px 3px var(--c)}
+.orb i:nth-child(1){--t:rotateX(70deg);animation:rg 9s linear infinite}
+.orb i:nth-child(2){--t:rotateY(70deg);animation:rg 12s linear infinite reverse}
+.orb i:nth-child(3){--t:rotateX(25deg) rotateY(25deg);inset:26px;animation:rg 7s linear infinite}
+@keyframes rg{from{transform:var(--t) rotateZ(0)}to{transform:var(--t) rotateZ(360deg)}}
+.orb b{position:absolute;inset:88px;border-radius:50%;background:radial-gradient(circle,#fff,var(--c) 40%,transparent 72%);animation:pl2 3s ease-in-out infinite}
+@keyframes pl2{50%{transform:scale(1.5);opacity:.7}}
+@media(max-width:700px){.orb{width:120px;height:120px;top:-10px}.orb b{inset:50px}}
 </style>
 </head>
 <body>
-<div class="mesh" aria-hidden="true"><i></i><i></i></div><div id="cu1"><b></b></div><div id="cu2"><s></s></div><div id="ct"></div><div class="lb" id="lb"></div>
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i><i></i></div><canvas id="nt" style="position:fixed;inset:0;z-index:-1;pointer-events:none" aria-hidden="true"></canvas><div id="cu1"><b></b></div><div id="cu2"><s></s></div><div id="ct"></div><div class="lb" id="lb"></div>
 <header><a class="lg" href="#home"><i>B</i><span><em>Travel</em><small>Center of Baku</small></span></a>
 <nav><a href="#home">Ana</a><a href="#visa">Viza</a><a href="#tours">Turlar</a><a href="#partners">Partnyorlar</a><a href="#about">Haqqımızda</a><a href="#contact">Əlaqə</a><a href="#advertise">Reklam</a></nav></header>
 
 <main>
 <section class="view" id="v-home">
 <div class="hero">
-<svg class="tcob" viewBox="0 0 1200 330" aria-hidden="true"><defs><linearGradient id="g"><stop offset="0" stop-color="#38BDF8"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#D91E63"/></linearGradient></defs><text class="b" x="600" y="290">TCOB</text><text class="s" x="600" y="290">TCOB</text></svg>
+<svg class="tcob" viewBox="0 0 1200 330" aria-hidden="true"><defs><linearGradient id="g"><stop offset="0" stop-color="#38BDF8"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#D91E63"/></linearGradient><linearGradient id="g2"><stop offset="0" stop-color="#D4AF37"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#38BDF8"/></linearGradient></defs><text class="b" x="600" y="290">TCOB</text><text class="s" x="600" y="290">TCOB</text><text class="s s2" x="600" y="290">TCOB</text></svg>
 <div class="beam" aria-hidden="true"></div>
 <div class="wrap hg"><div>
 <h1>Hara <em>uçmaq</em> istəyirsiniz?</h1>
@@ -238,17 +275,17 @@ footer{margin-top:110px;border-top:1px solid var(--line);color:var(--mut);paddin
 
 <footer><div class="wrap">© 2026 Travel Center of Baku. Bütün hüquqlar qorunur. Bu veb-platformada yer alan bütün dizayn elementləri, loqolar, proqram təminatı kodları, tur paketləri və vizual materiallar Travel Center of Baku şirkətinin müstəsna mülkiyyətidir. Şirkətin rəsmi yazılı icazəsi olmadan materialların kopyalanması, çoxaldılması və ya kommersiya məqsədilə istifadəsi qanunla qadağandır.</div></footer>
 
-<div class="ov" id="ov"><div class="panel"><button class="x" id="cx" aria-label="Bağla">×</button><span class="kick">Tur konstruktoru</span><h2 style="font-size:34px">Səyahətinizi qurun</h2>
-<div class="fl" style="margin-bottom:0"><input id="dst" placeholder=" " autocomplete="off"><label>Hara? (ilk 2 hərfi yazın)</label><div id="sug"></div></div>
+<div class="ov" id="ov"><div class="panel"><div class="pin"><button class="x" id="cx" aria-label="Bağla">×</button><span class="kick">Tur konstruktoru</span><h2 style="font-size:34px">Səyahətinizi qurun</h2>
+<span class="sl">İstiqamət</span><div class="fl" style="margin-bottom:0"><input id="dst" placeholder=" " autocomplete="off"><label>Hara? (ilk 2 hərfi yazın)</label><div id="sug"></div></div>
 <span class="sl">Tarix və müddət</span><div style="display:flex;gap:8px"><input type="date" id="dt"><select id="nt"><option>3 gecə / 4 gün</option><option>5 gecə / 6 gün</option><option>7 gecə / 8 gün</option><option>10 gecə / 11 gün</option></select></div>
 <span class="sl">Əlavə xidmətlər</span><div class="chips" id="ch"></div>
 <span class="sl">Seqment</span><div class="segs" id="sg"></div>
-<div class="fl" style="margin-top:20px"><input id="nm" placeholder=" "><label>Ad və soyad</label></div>
-<button class="btn p" id="send" style="width:100%;justify-content:center;margin-top:8px">Sifarişi WhatsApp-a göndər →</button></div></div>
+<span class="sl">Məlumatlarınız</span><div class="fl" style="margin-top:6px"><input id="nm" placeholder=" "><label>Ad və soyad</label></div>
+<button class="btn p" id="send" style="width:100%;justify-content:center;margin-top:8px">Sifarişi WhatsApp-a göndər →</button></div></div></div>
 
 <button class="fab snd" id="snd" aria-label="Səs">♪</button>
 <button class="fab" id="fab" aria-label="Dəstək"><i></i>Dəstək</button>
-<div class="card" id="sup"><span class="kick">Canlı dəstək</span><div class="fl"><input id="sn" placeholder=" "><label>Adınız</label></div><div class="fl"><textarea id="sq" rows="3" placeholder=" "></textarea><label>Sifariş və ya sualınız</label></div><button class="btn s p" id="ss">WhatsApp-a yaz →</button></div>
+<div class="card" id="sup"><span class="kick" style="display:flex;align-items:center;gap:8px"><i class="dotg"></i>Canlı dəstək · onlayn</span><div class="fl"><input id="sn" placeholder=" "><label>Adınız</label></div><div class="fl"><textarea id="sq" rows="3" placeholder=" "></textarea><label>Sifariş və ya sualınız</label></div><button class="btn s p" id="ss">WhatsApp-a yaz →</button></div>
 
 <script>
 (function(){
@@ -280,7 +317,7 @@ function p2(n){return(n<10?"0":"")+n}
 var rm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 
 var V=["home","visa","tours","partners","about","contact","advertise"],ct=$("ct");
-function show(){var h=(location.hash||"#home").slice(1);if(V.indexOf(h)<0)h="home";V.forEach(function(v){$("v-"+v).classList.toggle("on",v===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});window.scrollTo(0,0)}
+function show(){var h=(location.hash||"#home").slice(1);if(V.indexOf(h)<0)h="home";V.forEach(function(v){$("v-"+v).classList.toggle("on",v===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h)});document.body.dataset.p=h;window.scrollTo(0,0)}
 addEventListener("hashchange",function(){S.nav();if(rm||!ct.animate){show();return}ct.animate([{transform:"scaleY(0)",transformOrigin:"top"},{transform:"scaleY(1)",transformOrigin:"top",offset:.5},{transform:"scaleY(1)",transformOrigin:"bottom",offset:.5001},{transform:"scaleY(0)",transformOrigin:"bottom"}],{duration:950,easing:"cubic-bezier(.7,0,.3,1)"});setTimeout(show,470)});
 show();
 
@@ -333,6 +370,12 @@ od($("hp"),"759");
 function cd(){var now=Date.now(),end=CFG.hotStart+Math.ceil((now-CFG.hotStart)/CFG.hotCycle)*CFG.hotCycle,s=Math.max(0,Math.floor((end-now)/1e3));od($("cd"),p2(Math.floor(s/3600))+":"+p2(Math.floor(s%3600/60))+":"+p2(s%60))}
 function st(){var now=Date.now(),v=55420+Math.floor((now-CFG.epoch)/9e4)%1e7,a=Math.round(18+6*Math.sin(now/6e4)+3*Math.sin(now/9e3));try{var m=+localStorage.getItem("tcobV")||0;if(m>v)v=m;localStorage.setItem("tcobV",v)}catch(e){}od($("tv"),v.toLocaleString("en-US")+"+");od($("av"),String(a))}
 cd();st();setInterval(function(){cd();st()},1000);
+var PG={home:["#38BDF8","Bakı · Dubay · İstanbul · Paris · Maldiv adaları · Antaliya · Tbilisi · Roma"],visa:["#0284C7","Vizasız · Elektron viza · Səfirlik vizası · Sənədlər · Rüsumlar · Baxılma müddəti"],tours:["#D91E63","Dubay · İstanbul · Paris · Roma · Bali · Maldiv adaları · Bangkok"],partners:["#5B8AC6","Aviaşirkətlər · Otel şəbəkələri · Turizm tərəfdaşları"],about:["#D4AF37","Etibar · Peşəkarlıq · Şəxsi menecer · Diqqət"],contact:["#D91E63","Əlaqə · WhatsApp · Xəritə · Dəstək"],advertise:["#38BDF8","Reklam · Əməkdaşlıq · Təqdimat · Yeni imkanlar"]};
+function mq(t){var a=t.split(" · ").map(function(x){return"<span>"+x+"</span>"}).join("");return'<div class="mq"><div>'+a+a+"</div></div>"}
+Object.keys(PG).forEach(function(k){var v=$("v-"+k);if(k==="home"){v.querySelector(".hero").insertAdjacentHTML("afterend",mq(PG[k][1]));return}v.querySelector(".ph .wrap").insertAdjacentHTML("beforeend",'<div class="orb" style="--c:'+PG[k][0]+'"><i></i><i></i><i></i><b></b></div>');v.querySelector(".ph").insertAdjacentHTML("afterend",mq(PG[k][1]))});
+var cv=$("nt"),cx=cv.getContext("2d"),P=[],W,H;function rs(){W=cv.width=innerWidth;H=cv.height=innerHeight}rs();addEventListener("resize",rs);
+for(var pi=0;pi<(innerWidth<700?28:62);pi++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35});
+(function nf(){cx.clearRect(0,0,W,H);for(var i=0;i<P.length;i++){var a=P[i];a.x+=a.vx;a.y+=a.vy;if(a.x<0||a.x>W)a.vx*=-1;if(a.y<0||a.y>H)a.vy*=-1;cx.fillStyle="rgba(190,230,255,.75)";cx.fillRect(a.x,a.y,2,2);for(var j=i+1;j<P.length;j++){var b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<150){cx.strokeStyle="rgba(120,200,255,"+(.2*(1-d/150))+")";cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}}if(!rm)requestAnimationFrame(nf)})();
 var io=("IntersectionObserver"in window)?new IntersectionObserver(function(en){en.forEach(function(x){if(!x.isIntersecting)return;var t=x.target;t.classList.add("in");if(t.classList.contains("od")&&t.dataset.v)od(t,t.dataset.v);io.unobserve(t)})},{threshold:.15}):null;
 document.querySelectorAll(".sec,.tc,.bn,.vr,.pass,.card:not(#sup)").forEach(function(e){if(io){e.classList.add("rv");io.observe(e)}});
 document.querySelectorAll(".od[data-v]").forEach(function(e){if(io)io.observe(e);else od(e,e.dataset.v)});
