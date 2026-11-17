@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Travel Center of Baku</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;600;800&family=Pacifico&display=swap">
+<style>
+:root{--sky:#38BDF8;--deep:#0284C7;--navy:#062B4A;--steel:#5B8AC6;--cloud:#F0F9FF;--paper:#fff;--pink:#D91E63;--gold:#D4AF37;--ink:#07304f;--mut:#53708a;--line:rgba(2,132,199,.2);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--cloud:#041a2e;--paper:#0a2d4b;--ink:#e6f4ff;--mut:#9cb9d2;--line:rgba(56,189,248,.28)}}
+:root[data-theme="dark"]{--cloud:#041a2e;--paper:#0a2d4b;--ink:#e6f4ff;--mut:#9cb9d2;--line:rgba(56,189,248,.28)}
+@property --a{syntax:"<angle>";initial-value:0deg;inherits:false}
+*{box-sizing:border-box;margin:0}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{background:var(--cloud);color:var(--ink);font:16px/1.6 Manrope,"Segoe UI",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3,.dsp{font-family:Unbounded,"Trebuchet MS",sans-serif;letter-spacing:-.03em;line-height:1.08}
+h2{font-size:clamp(24px,4.4vw,40px);font-weight:800;margin-bottom:14px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
+nav{position:sticky;top:calc(10px + env(safe-area-inset-top,0px));z-index:30;margin:10px auto 0;width:max-content;max-width:calc(100% - 20px);display:flex;gap:4px;align-items:center;padding:6px;border-radius:99px;background:rgba(255,255,255,.55);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.8);box-shadow:0 12px 34px -12px rgba(2,132,199,.5);overflow-x:auto}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) nav{background:rgba(6,43,74,.6);border-color:var(--line)}}
+nav a{white-space:nowrap;text-decoration:none;padding:9px 15px;border-radius:99px;font-weight:600;font-size:14px;color:var(--ink);transition:.3s}
+nav a:hover{background:rgba(56,189,248,.25)}
+nav a.on{background:var(--ink);color:var(--cloud)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) nav a.on{background:var(--sky);color:var(--navy)}}
+nav .lg{display:flex;align-items:center;gap:8px;padding:2px 14px 2px 4px;font:400 20px Pacifico,cursive;color:var(--pink);text-decoration:none}
+.lg i{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--sky),var(--deep));color:#fff;font:800 16px Unbounded,sans-serif;font-style:normal}
+.view{display:none}.view.on{display:block;animation:pg .6s cubic-bezier(.2,.8,.2,1)}
+@keyframes pg{from{opacity:0;transform:translateY(24px) scale(.99);filter:blur(6px)}}
+.hero{position:relative;overflow:hidden;margin-top:-64px;padding:130px 0 90px;min-height:100vh;background:radial-gradient(circle at 85% 8%,#fff 0,rgba(255,255,255,0) 28%),linear-gradient(180deg,#6cc9fb 0,#b9e6ff 45%,var(--cloud) 100%)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero{background:radial-gradient(circle at 85% 8%,rgba(56,189,248,.5),transparent 30%),linear-gradient(180deg,#0a4f7e,#062b4a 55%,var(--cloud))}}
+.tcob{position:absolute;left:50%;top:50%;width:min(1200px,160vw);transform:translate(-50%,-52%);pointer-events:none}
+.tcob text{font:800 330px Unbounded,sans-serif;text-anchor:middle;fill:rgba(255,255,255,.16);stroke-width:2}
+.tcob .b{stroke:rgba(255,255,255,.5)}
+.tcob .s{fill:none;stroke:url(#g);stroke-width:5;stroke-dasharray:240 1400;animation:sw 7s linear infinite;filter:drop-shadow(0 0 10px #fff)}
+@keyframes sw{to{stroke-dashoffset:-1640}}
+.clouds{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.clouds use{animation:dr linear infinite}
+@keyframes dr{from{transform:translateX(-320px)}to{transform:translateX(1500px)}}
+.plane{position:absolute;left:0;top:0;offset-path:path("M-80 520 C 300 120, 760 520, 1400 140");offset-rotate:auto;animation:pf 19s linear infinite;z-index:2;filter:drop-shadow(0 14px 10px rgba(2,60,110,.35))}
+.plane::before{content:"";position:absolute;right:46px;top:20px;width:260px;height:4px;border-radius:4px;background:linear-gradient(90deg,transparent,#fff)}
+@keyframes pf{from{offset-distance:0}to{offset-distance:100%}}
+.hg{position:relative;z-index:3;display:grid;gap:44px;grid-template-columns:1.15fr .85fr;align-items:center}
+@media(max-width:860px){.hg{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(38px,7.4vw,86px);font-weight:800;color:var(--navy);text-shadow:0 2px 0 rgba(255,255,255,.6)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero h1{color:#fff;text-shadow:none}}
+.hero p{margin:18px 0 28px;max-width:440px;font-size:18px;color:#12466b}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero p{color:#cde8fb}}
+.glow{position:relative;border:0;cursor:pointer;color:#fff;font:700 17px Manrope,sans-serif;padding:18px 36px;border-radius:99px;background:var(--pink);isolation:isolate;transition:transform .35s cubic-bezier(.3,1.7,.5,1)}
+.glow::before{content:"";position:absolute;inset:-3px;border-radius:99px;z-index:-2;background:conic-gradient(from var(--a),#38BDF8,#fff,#D91E63,#38BDF8);animation:sp 3s linear infinite}
+.glow::after{content:"";position:absolute;inset:0;border-radius:99px;background:var(--pink);z-index:-1}
+@keyframes sp{to{--a:360deg}}
+.glow:hover{transform:scale(1.07) rotate(-1deg)}
+.bp{cursor:pointer;color:var(--navy);transition:transform .2s;transform-style:preserve-3d;filter:drop-shadow(0 30px 30px rgba(2,60,110,.35));max-width:430px;margin-left:auto;width:100%}
+.bp>div{display:grid;grid-template-columns:1fr 112px;background:radial-gradient(circle at 100% 0,transparent 15px,#fff 16px) 0 0/100% 51% no-repeat,radial-gradient(circle at 100% 100%,transparent 15px,#fff 16px) 0 100%/100% 51% no-repeat;border-radius:26px}
+.bp .l{padding:24px 22px;border-right:2px dashed rgba(2,132,199,.3)}
+.bp .r{padding:24px 10px;text-align:center;display:flex;flex-direction:column;justify-content:space-between;align-items:center;font-weight:800;color:var(--pink)}
+.bp .rt{font:800 40px Unbounded,sans-serif;display:flex;gap:10px;align-items:center;margin:10px 0}
+.bp .rt s{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--sky) 0 6px,transparent 6px 12px);text-decoration:none;position:relative}
+.bp small{color:#53708a;font-size:13px}
+.f{display:inline-grid;place-items:center;min-width:.72em;padding:.12em .16em;margin:0 1.5px;background:linear-gradient(#0e4a7c 50%,#0a3b66 50%);border-radius:.18em;font:800 1em Unbounded,sans-serif;color:#fff;position:relative}
+.f::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:rgba(0,0,0,.55)}
+.f.s{background:none;min-width:.3em;padding:0;color:inherit}.f.s::after{display:none}
+.f.fl{animation:fl .45s ease-out}
+@keyframes fl{from{transform:rotateX(-90deg);opacity:.3}}
+.bp .cd{font-size:22px;margin:6px 0;color:#fff}.bp .cd .f.s{color:var(--navy)}
+.sec{padding:80px 0 0}
+.board{background:var(--navy);border-radius:30px;padding:14px;color:#fff;box-shadow:0 40px 60px -30px rgba(2,60,110,.7)}
+.row{display:grid;grid-template-columns:86px 1fr auto auto;gap:14px;align-items:center;padding:14px 12px;border-bottom:1px solid rgba(255,255,255,.1);font-size:15px}
+.row:last-child{border:0}
+.row .code{color:var(--sky);font:800 20px Unbounded,sans-serif}
+.row .ct{font-size:15px;display:flex;flex-wrap:wrap}
+.row .pr{font-size:17px;color:var(--gold)}
+@media(max-width:640px){.row{grid-template-columns:1fr auto;}.row .code{grid-column:1/-1;font-size:14px}.row .ct{font-size:12px}}
+.btn{display:inline-block;border:0;cursor:pointer;padding:11px 20px;border-radius:99px;background:var(--pink);color:#fff;font:700 14px Manrope,sans-serif;text-decoration:none;transition:.3s cubic-bezier(.3,1.6,.5,1)}
+.btn:hover{transform:scale(1.08)}
+.btn.sk{background:var(--deep)}
+.vz{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.pass{position:relative;background:var(--paper);border-radius:6px 22px 22px 6px;padding:22px 22px 22px 26px;border-left:12px solid var(--c);box-shadow:0 20px 30px -22px rgba(2,60,110,.6);background-image:repeating-linear-gradient(transparent 0 31px,var(--line) 31px 32px)}
+.pass h3{font-size:22px;margin-bottom:6px}
+.pass p{font-size:14px;color:var(--mut)}
+.stamp{position:absolute;right:14px;top:14px;width:84px;height:84px;border-radius:50%;border:3px double var(--c);color:var(--c);display:grid;place-items:center;text-align:center;font:800 10px Unbounded,sans-serif;transform:rotate(-14deg);opacity:.85;padding:8px}
+.vip{background:linear-gradient(160deg,#04223b,#0a3b66);border-radius:34px;padding:36px 26px;color:#fff;border:1.5px solid var(--gold);box-shadow:0 0 50px rgba(212,175,55,.35),inset 0 0 60px rgba(212,175,55,.1)}
+.vip h2{color:var(--gold)}
+.vg{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-top:18px}
+.vc{padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(212,175,55,.28),rgba(212,175,55,.05));border:1px solid rgba(212,175,55,.6)}
+.vc b{display:block;font:800 17px Unbounded,sans-serif}.vc small{color:var(--gold);font-weight:700}.vc span{float:right;font:800 30px Unbounded,sans-serif;color:var(--gold)}
+.mo{display:flex;gap:8px;overflow-x:auto;padding:6px 0 14px}
+.mo button,.chip,.seg{cursor:pointer;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:99px;padding:10px 16px;font:600 14px Manrope,sans-serif;white-space:nowrap;transition:.35s cubic-bezier(.3,1.5,.5,1)}
+.mo button.on,.chip.on{background:var(--deep);color:#fff;border-color:var(--deep);padding-inline:24px;box-shadow:0 0 18px var(--sky)}
+#mres{min-height:130px;border-radius:26px;padding:24px;background:linear-gradient(120deg,var(--sky),var(--steel));color:#fff;display:flex;gap:18px;align-items:center}
+#mres b{font:800 clamp(44px,10vw,84px) Unbounded,sans-serif;opacity:.5;line-height:1}
+.card{background:var(--paper);border-radius:26px;padding:24px;box-shadow:0 20px 30px -24px rgba(2,60,110,.6);border:1px solid var(--line)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.rev{margin-top:10px;padding:14px 16px;border-radius:16px;background:var(--cloud);border-left:4px solid var(--pink)}
+input,select,textarea{width:100%;padding:13px 15px;border-radius:14px;border:1.5px solid var(--line);background:var(--cloud);color:var(--ink);font:inherit;margin:6px 0}
+.stats{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));text-align:center}
+.stats .n{font-size:30px;margin-bottom:8px;display:flex;justify-content:center;color:#fff}
+.stats .n .f.s{color:var(--ink)}
+.ph{padding:120px 0 40px;margin-top:-64px;background:linear-gradient(180deg,#8bd5fc,var(--cloud))}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ph{background:linear-gradient(180deg,#0a4f7e,var(--cloud))}}
+.ph h1{font-size:clamp(34px,7vw,72px);font-weight:800;margin-top:20px;color:var(--navy)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ph h1{color:#fff}}
+.back{display:inline-block;padding:9px 18px;border-radius:99px;background:rgba(255,255,255,.7);text-decoration:none;font-weight:700;color:#07304f;backdrop-filter:blur(10px)}
+.ov{position:fixed;inset:0;z-index:60;display:none;place-items:center;background:rgba(4,26,46,.55);backdrop-filter:blur(10px);padding:14px}
+.ov.on{display:grid}
+.panel{width:min(660px,100%);max-height:92vh;overflow:auto;background:var(--paper);border-radius:30px;padding:26px;position:relative;animation:pop .6s cubic-bezier(.2,1.5,.4,1)}
+@keyframes pop{from{transform:translateY(80px) scale(.9) rotateX(25deg);opacity:0}}
+.x{position:absolute;right:16px;top:10px;background:none;border:0;font-size:30px;cursor:pointer;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0}
+.segs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.seg{border-radius:18px;text-align:center;white-space:normal}
+.seg.on{border-color:var(--pink);box-shadow:0 0 16px rgba(217,30,99,.45);transform:translateY(-3px)}
+#sug{position:absolute;left:0;right:0;background:var(--paper);border-radius:14px;z-index:5;max-height:190px;overflow:auto;box-shadow:0 14px 30px rgba(0,0,0,.2)}
+#sug div{padding:10px 14px;cursor:pointer;display:flex;justify-content:space-between}
+#sug div:hover{background:var(--sky);color:#fff}
+.tag{font-size:11px;font-style:normal;padding:2px 9px;border-radius:99px;background:var(--pink);color:#fff;margin-left:4px}
+.radar{position:relative;width:100px;height:100px;margin:6px auto 16px}
+.radar i{position:absolute;inset:0;border-radius:50%;border:2px solid var(--pink);animation:rd 2.4s ease-out infinite}
+.radar i:nth-child(2){animation-delay:.8s}.radar i:nth-child(3){animation-delay:1.6s}
+.radar::after{content:"";position:absolute;inset:42px;border-radius:50%;background:var(--pink)}
+@keyframes rd{from{transform:scale(.2);opacity:1}to{transform:scale(1.5);opacity:0}}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:58px;height:58px;border-radius:50%;border:0;background:#25D366;color:#fff;font-size:26px;cursor:pointer;box-shadow:0 12px 26px rgba(0,0,0,.3)}
+.snd{bottom:calc(86px + env(safe-area-inset-bottom,0px));background:var(--navy)}
+#sup{position:fixed;right:16px;bottom:calc(156px + env(safe-area-inset-bottom,0px));z-index:40;width:min(310px,calc(100% - 32px));display:none}
+#sup.on{display:block;animation:pop .5s}
+footer{margin-top:80px;background:var(--navy);color:#a9c8e2;padding:36px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:13px}
+.ini{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--sky),var(--pink));color:#fff;font:800 18px Unbounded,sans-serif;margin-bottom:12px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<nav>
+<a class="lg" href="#home"><i>B</i>Travel</a>
+<a href="#home">Ana</a><a href="#visa">Viza</a><a href="#tours">Turlar</a><a href="#partners">Partnyorlar</a><a href="#about">Haqqımızda</a><a href="#contact">Əlaqə</a><a href="#advertise">Reklam</a>
+</nav>
+
+<main>
+<section class="view" id="v-home">
+<div class="hero">
+<svg class="tcob" viewBox="0 0 1200 460" aria-hidden="true"><defs><linearGradient id="g"><stop offset="0" stop-color="#38BDF8"/><stop offset=".5" stop-color="#fff"/><stop offset="1" stop-color="#D91E63"/></linearGradient></defs><text class="b" x="600" y="370">TCOB</text><text class="s" x="600" y="370">TCOB</text></svg>
+<svg class="clouds" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs><symbol id="c" viewBox="0 0 160 80"><g fill="#fff"><circle cx="45" cy="48" r="26"/><circle cx="82" cy="34" r="32"/><circle cx="120" cy="48" r="26"/><rect x="30" y="48" width="106" height="28" rx="14"/></g></symbol></defs>
+<use href="#c" x="0" y="80" width="260" height="130" style="animation-duration:90s;opacity:.55"/><use href="#c" x="0" y="300" width="420" height="210" style="animation-duration:120s;animation-delay:-50s;opacity:.8"/><use href="#c" x="0" y="560" width="360" height="180" style="animation-duration:75s;animation-delay:-30s"/><use href="#c" x="0" y="470" width="200" height="100" style="animation-duration:60s;animation-delay:-10s;opacity:.7"/></svg>
+<div class="plane" aria-hidden="true"><svg width="62" viewBox="0 0 56 30"><path d="M2 15 22 11 8 1h8l22 9 14 2c3 1 3 5 0 6l-14 2-22 9H8l14-10-20-4z" fill="#fff" stroke="#0284C7" stroke-width="1.5"/></svg></div>
+<div class="wrap hg"><div>
+<h1>Hara uçmaq istəyirsiniz?</h1>
+<p>Bakıdan dünyaya: bilet, otel, viza və transfer bir sifarişdə.</p>
+<button class="glow" id="open">Səyahətini planlaşdır</button></div>
+<div class="bp" id="bp"><div><div class="l"><small>Yanar Tur · son saatlar</small><div class="rt"><span>BAK</span><s></s><span>SSH</span></div><b>Şarm əl-Şeyx, Misir</b><div class="cd" id="cd"></div></div>
+<div class="r"><small>Bilet</small><span class="dsp" style="font-size:20px">759<br>AZN</span><small>Sifariş et</small></div></div></div></div>
+</div>
+
+<div class="wrap">
+<div class="sec"><h2>Uçuş cədvəli: populyar turlar</h2>
+<div class="board" id="bd"></div></div>
+
+<div class="sec"><div class="vip"><h2>VIP müştərilər klubu</h2><p style="color:#b9d3e8">Ən çox səyahət edən daimi qonaqlarımız.</p><div class="vg" id="vip"></div></div></div>
+
+<div class="sec"><h2>Hansı ayda hara getməli?</h2><div class="mo" id="mo"></div><div id="mres"><b>?</b><span>Ay seçin, ən yaxşı istiqamətləri göstərək.</span></div></div>
+
+<div class="sec"><h2>Müştəri rəyləri</h2><div class="card"><input id="rn" placeholder="Ad və soyad"><textarea id="rt" rows="3" placeholder="Rəyiniz"></textarea><button class="btn" id="rs">Rəyi paylaş</button><div id="rl"></div></div></div>
+
+<div class="sec"><div class="card"><h2>Canlı Instagram</h2><p style="color:var(--mut);margin-bottom:14px">Son paylaşımlar üçün rəsmi profilimizə keçin.</p><a class="btn sk" id="ig" target="_blank" rel="noopener">Instagram-a keç</a></div></div>
+
+<div class="sec"><div class="board stats"><div><div class="n" id="tv"></div>ümumi ziyarətçi</div><div><div class="n" id="av"></div>hazırda saytda</div><div><div class="n" id="cn"></div>istiqamət</div></div></div>
+</div>
+</section>
+
+<section class="view" id="v-visa"><header class="ph"><div class="wrap"><a class="back" href="#home">← Ana səhifəyə qayıt</a><h1>Viza məlumat mərkəzi</h1></div></header><div class="wrap"><p style="color:var(--mut);margin:24px 0">Məlumatlar yönləndiricidir; dəqiq şərtləri sifarişdən əvvəl təsdiqləyirik.</p><div class="vz" id="vz"></div></div></section>
+
+<section class="view" id="v-tours"><header class="ph"><div class="wrap"><a class="back" href="#home">← Ana səhifəyə qayıt</a><h1>Bütün turlar</h1></div></header><div class="wrap" style="margin-top:30px"><div class="board" id="bd2"></div></div></section>
+
+<section class="view" id="v-partners"><header class="ph"><div class="wrap"><a class="back" href="#home">← Ana səhifəyə qayıt</a><h1>Partnyorlar və otellər</h1></div></header><div class="wrap" style="margin-top:30px"><div class="grid" id="pt"></div></div></section>
+
+<section class="view" id="v-about"><header class="ph"><div class="wrap"><a class="back" href="#home">← Ana səhifəyə qayıt</a><h1>Biz kimik</h1></div></header><div class="wrap" style="margin-top:30px"><div class="card"><p style="font-size:19px">Travel Center of Baku Xəzər sahilindən başlayan səyahətləri sadə və etibarlı etmək üçün qurulub. Uçuşu, oteli, vizanı və transferi bir sifarişdə birləşdirir, hər müştəriyə şəxsi menecer ayırırıq.</p></div><h2 style="margin:36px 0 14px">Komandamız</h2><div class="grid" id="tm"></div></div></section>
+
+<section class="view" id="v-contact"><header class="ph"><div class="wrap"><a class="back" href="#home">← Ana səhifəyə qayıt</a><h1>Əlaqə və xəritə</h1></div></header><div class="wrap grid" style="margin-top:30px"><div class="card" style="text-align:center"><div class="radar"><i></i><i></i><i></i></div><p><b>Bakı, Azərbaycan</b></p><p style="margin-top:12px"><button class="btn sk" id="cp">Nömrəni kopyala</button> <a class="btn" id="wa1" target="_blank" rel="noopener">WhatsApp</a></p></div><iframe title="Xəritə" src="https://maps.google.com/maps?q=Baku&output=embed" style="width:100%;min-height:280px;border:0;border-radius:26px" loading="lazy"></iframe></div></section>
+
+<section class="view" id="v-advertise"><header class="ph"><div class="wrap"><a class="back" href="#home">← Ana səhifəyə qayıt</a><h1>Reklam verin</h1></div></header><div class="wrap" style="margin-top:30px"><div class="card"><p style="color:var(--mut)">Yüksək ziyarətçili platformada brendinizi tanıdın.</p><input id="an" placeholder="Şirkət adı"><textarea id="at" rows="3" placeholder="Təklifiniz"></textarea><button class="btn" id="as">Müraciəti göndər</button></div></div></section>
+</main>
+
+<footer><div class="wrap">© 2026 Travel Center of Baku. Bütün hüquqlar qorunur. Bu veb-platformada yer alan bütün dizayn elementləri, loqolar, proqram təminatı kodları, tur paketləri və vizual materiallar Travel Center of Baku şirkətinin müstəsna mülkiyyətidir. Şirkətin rəsmi yazılı icazəsi olmadan materialların kopyalanması, çoxaldılması və ya kommersiya məqsədilə istifadəsi qanunla qadağandır.</div></footer>
+
+<div class="ov" id="ov"><div class="panel"><button class="x" id="cx" aria-label="Bağla">×</button><h2>Tur konstruktoru</h2>
+<div style="position:relative"><input id="dst" placeholder="Hara? (ilk 2 hərfi yazın)" autocomplete="off"><div id="sug"></div></div>
+<div style="display:flex;gap:8px"><input type="date" id="dt"><select id="nt"><option>3 gecə / 4 gün</option><option>5 gecə / 6 gün</option><option>7 gecə / 8 gün</option><option>10 gecə / 11 gün</option></select></div>
+<div class="chips" id="ch"></div><div class="segs" id="sg"></div><input id="nm" placeholder="Ad və soyad">
+<button class="glow" id="send" style="width:100%;margin-top:12px">Sifarişi WhatsApp-a göndər</button></div></div>
+
+<button class="fab snd" id="snd" aria-label="Səs">🔊</button>
+<button class="fab" id="fab" aria-label="Dəstək">💬</button>
+<div class="card" id="sup"><b>Canlı dəstək</b><input id="sn" placeholder="Adınız"><textarea id="sq" rows="3" placeholder="Sualınız"></textarea><button class="btn" id="ss">Dəstəyə bağlan</button></div>
+
+<script>
+(function(){
+var CFG={wa:"994500000000",ig:"https://www.instagram.com/",epoch:Date.UTC(2026,0,1),hotStart:Date.UTC(2026,10,17,0,0,0),hotCycle:36*36e5,vip:[["Aysel M.","Platin Səyahətçi",41],["Rövşən H.","Qızıl Klub Üzvü",33],["Leyla və Elçin Q.","Qızıl Klub Üzvü",27],["Tural İ.","Platin Səyahətçi",38]]};
+var $=function(i){return document.getElementById(i)};
+var D="Dubay|VB,İstanbul|VBP,Antaliya|BP,Şarm əl-Şeyx|VB,Hurqada|VB,Tbilisi|VBP,Moskva|B,Paris|BP,Roma|B,Milan|B,Barselona|B,Madrid|B,London|B,Amsterdam|B,Praqa|B,Budapeşt|B,Vyana|B,Berlin|B,Varşava|B,Afina|B,Santorini|P,Bali|P,Phuket|VP,Bangkok|VB,Kuala Lumpur|V,Sinqapur|B,Tokio|B,Seul|B,Pekin|B,Şanxay|B,Dehli|B,Maldiv adaları|P,Colombo|B,Doha|VB,Əbu-Dabi|VB,Ər-Riyad|B,Kair|VB,Tunis|V,Mərakeş|V,Nyu-York|B,Los-Anceles|B,Toronto|B,Sidney|B,Kiyev|B,Minsk|B,Almatı|VB,Daşkənd|VB,Bişkek|V,Batumi|VBP,Kutaisi|VB,Yerevan|B,Tehran|B,Təbriz|B,Marmaris|BP,Bodrum|BP,Kapadokya|P,Trabzon|VB,Sofiya|B,Bukarest|B,Belqrad|V,Tivat|P,Zaqreb|B,Lissabon|B,Kopenhagen|B,Oslo|B,Stokholm|B,Helsinki|B,Zürix|B,Cenevrə|B,Brüssel|B,Dublin|B,Edinburq|B,Zanzibar|P,Kayp Taun|B,Nairobi|B,Havana|V,Kankun|P,Rio-de-Janeyro|B".split(",").map(function(x){var p=x.split("|");return{n:p[0],t:p[1]}});
+var X="Brno,Ostrava,Krakov,Qdansk,Vroslav,Poznan,Bratislava,Kosice,Lyubyana,Bled,Split,Dubrovnik,Zadar,Pula,Sarayevo,Mostar,Skopye,Ohrid,Tirana,Saranda,Priştina,Kotor,Budva,Varna,Burqas,Plovdiv,Konstansa,Kluj,Timişoara,Yaşı,Kişineu,Odessa,Lvov,Xarkov,Dnepr,Riqa,Vilnüs,Tallin,Tartu,Sankt-Peterburq,Soçi,Kazan,Yekaterinburq,Novosibirsk,Krasnodar,Ufa,Samara,Perm,Nijni Novqorod,Kaliningrad,Murmansk,Hamburq,Münhen,Frankfurt,Kyoln,Düsseldorf,Drezden,Leypsiq,Nürnberq,Ştutqart,Zalsburq,İnsbruk,Qrats,Bern,Lüqano,Lyuksemburq,Anvers,Brüqqe,Roterdam,Haqa,Lill,Lion,Marsel,Nitssa,Bordo,Tuluza,Strasburq,Monako,Nant,Kann,Florensiya,Venesiya,Neapol,Palermo,Sardiniya,Bolonya,Turin,Verona,Piza,Sorrento,Amalfi,Siciliya,Valensiya,Sevilya,Malaqa,Qranada,Palma de Maykorka,İbiza,Tenerife,Qran Kanariya,Porto,Faro,Madeyra,Azor adaları,Reykyavik,Berqen,Qoteborq,Malmö,Orhus,Turku,Rovaniemi,Laplandiya,Mançester,Liverpul,Birmingem,Qlazqo,Belfast,Kardiff,Oksford,Kembric,Bergamo,Cenova,Bari,Katanya,Mikonos,Krit,Rodos,Korfu,Zakintos,Kefalonya,Salonik,Meteora,Larnaka,Pafos,Limasol,Ayia-Napa,Girne,Valletta,Mdina,Vaduts,Andorra,San-Marino,Nişi,Novi Sad,Banya-Luka,Plitvitse,Hvar,Sibenik,Trogir,Korçula,Hallştatt,Çeski-Krumlov,Karlovı-Varı,Zakopane,Kolmar,Annesi,Şamoni,Dolomit Alpları,Komo gölü,Qarda gölü,Brest,Vitebsk,Homel,Ankara,İzmir,Bursa,Konya,Qaziantep,Van,Qars,Samsun,Alanya,Side,Belek,Kemer,Fethiye,Kuşadası,Çeşmə,Dalaman,Edirne,Çanaqqala,Rize,Uzungöl,Bolu,Sapanca,Mersin,Hatay,Mardin,Diyarbəkir,Ərzurum,Kayseri,Nevşehir,Ağrı,Mestia,Qudauri,Bakuriani,Siqnaği,Telavi,Borjomi,Kobuleti,Sarpi,Gümrü,Dilican,Sevan,Cermuk,Astana,Şımkənt,Aktau,Atırau,Səmərqənd,Buxara,Xivə,Fərqanə,Oş,İssık-Kul,Düşənbə,Aşqabad,Türkmənbaşı,Qarağanda,Küveyt,Bəhreyn,Maskat,Salalah,Əqəbə,Amman,Beyrut,Bağdad,Ərbil,Cidda,Mədinə,Məkkə,Dammam,Şarcə,Raz əl-Xeymə,Füceyra,Əl-Ayn,Əlüla,Neom,Qüds,Tel-Əviv,Şiraz,İsfahan,Məşhəd,Rəşt,Kiş adası,Ərdəbil,Kasablanka,Aqadir,Fes,Əlcəzair,İskəndəriyyə,Luksor,Asuan,Dəhəb,Mərsa Aləm,Taba,Dar-es-Salam,Kilimancaro,Moşi,Mombasa,Entebbe,Kiqali,Addis-Əbəbə,Mavrikiy,Seyşel adaları,Rayunyon,Madaqaskar,Yohannesburq,Durban,Viktoriya şəlalələri,Livinqston,Vindhuk,Dakar,Akkra,Laqos,Abuca,Abican,Mumbay,Qoa,Banqalor,Çennay,Kerala,Kolkata,Cayпur,Aqra,Udaypur,Hyderabad,Katmandu,Pokhara,Daka,Kandy,Qalle,Hanoy,Ho-Şi-Min,Da-Nanq,Nha-Trang,Fukuok,Siem-Rip,Pnom-Pen,Luanq-Prabanq,Vyentyan,Yanqon,Ubud,Cakarta,Lombok,Yoqyakarta,Komodo,Manila,Sebu,Boracay,Palavan,Pinanq,Langkavi,Kota-Kinabalu,Çiangmay,Pattaya,Krabi,Koh Samui,Koh Phi Phi,Hua Hin,Hong Konq,Makao,Şenzen,Quançjou,Çenqdu,Sian,Quilin,Taybey,Osaka,Kyoto,Naqoya,Sapporo,Fukuoka,Okinava,Busan,Ceju,Ulan-Bator,Vladivostok,Sanya,Harbin,Kunmin,Hirosima,Nara,Kanazava,Nikko,Çonqçinq,Vuhan,Hançjou,Nankin,Surabaya,Medan,Batam,Brunei,Çikaqo,Mayami,San-Fransisko,Las-Veqas,Vaşinqton,Boston,Orlando,Honolulu,Seattl,Vankuver,Monreal,Meksiko,Los Kabos,Playa del Karmen,Panama,Boqota,Medelin,Kartaxena,Lima,Kusko,Maçu-Pikçu,Kito,Qalapaqos,Buenos-Ayres,Santyaqo,Montevideo,Sao-Paulo,Salvador,San-Xuan,Punta-Kana,Nassau,Yamayka,Aruba,Kuraçao,Melburn,Brisben,Perth,Oklend,Kuinstaun,Fici,Bora-Bora,Taiti".split(",");var seen={};D.forEach(function(d){seen[d.n]=1});X.forEach(function(n){n=n.trim();if(n&&!seen[n]){seen[n]=1;D.push({n:n,t:"T"})}});
+var TG={V:"Vizasız",B:"Birbaşa uçuş",P:"Populyar",T:"Tranzitlə"};
+var TOURS=[["IST","İstanbul",389,"Vizasız"],["DXB","Dubay",899,"Birbaşa"],["AYT","Antaliya",649,"Populyar"],["SSH","Şarm əl-Şeyx",759,"Yanar"],["TBS","Tbilisi",189,"Vizasız"],["CDG","Paris",1390,"Avropa"],["MLE","Maldiv adaları",2790,"VIP"]];
+var VZ=[["Türkiyə","TR","Vizasız","Pasport","Pulsuz","Dərhal","#0284C7"],["Gürcüstan","GE","Vizasız","Pasport","Pulsuz","Dərhal","#0284C7"],["BƏƏ","AE","Vizasız / e-viza","Pasport, bilet","Şərtlərə görə","1–3 gün","#5B8AC6"],["Misir","EG","Elektron viza","Pasport, foto","~25 USD","2–4 gün","#5B8AC6"],["Tailand","TH","Elektron viza","Pasport, otel, bilet","~35 USD","3–5 gün","#5B8AC6"],["Şengen","EU","Səfirlik vizası","Sığorta, otel, maliyyə sənədi","~90 EUR","10–15 gün","#D91E63"],["İngiltərə","UK","Səfirlik vizası","Bank çıxarışı, iş məktubu","~130 GBP","15–21 gün","#D91E63"],["ABŞ","US","Səfirlik vizası","Anket, müsahibə","185 USD","Növbəyə görə","#D91E63"]];
+var MON=[["Yan","Dubay, Misir, Tailand: isti və qiymət orta."],["Fev","Maldiv adaları, Bali, Dubay: quru mövsüm."],["Mar","Dubay, İstanbul, Mərakeş: yumşaq hava."],["Apr","İstanbul, Roma, Tbilisi: bahar və sərfəli turlar."],["May","Paris, Barselona, Antaliya: dəniz mövsümü açılır."],["İyn","Antaliya, Santorini, Batumi: isti və canlı."],["İyl","Marmaris, Bodrum, Tivat: pik mövsüm, əvvəlcədən sifariş."],["Avq","Hurqada, Antaliya, Batumi: dəniz və isti."],["Sen","Şarm əl-Şeyx, Yunanıstan: sakit və sərfəli."],["Okt","Kapadokya, Praqa, Vyana: rəngarəng payız."],["Noy","Dubay, Misir, Qahirə: səmimi isti."],["Dek","Dubay, Zanzibar, Laplandiya: bayram turları."]];
+var AD=[["Aviabilet daxil","✈️"],["VIP transfer","🚘"],["Hər şey daxil","🍹"],["Səyahət sığortası","🛡️"],["Fərdi bələdçi","🧭"],["Viza dəstəyi","📄"]];
+var SG=["Ekonom","Standart (4★)","VIP (5★)"];
+var PT=["Azərbaycan Hava Yolları","Turkish Airlines","Emirates","Qatar Airways","Marriott","Hilton","Rixos","Accor"];
+var TM=[["Nigar","Baş menecer"],["Kamran","Aviabilet üzrə mütəxəssis"],["Səbinə","Viza meneceri"],["Orxan","VIP xidmətlər"]];
+function wa(t){return"https://wa.me/"+CFG.wa+"?text="+encodeURIComponent(t)}
+
+var AC=null,on=true;try{on=localStorage.getItem("tcobSnd")!=="0"}catch(e){}
+function tone(f,d,ty,v,g){if(!on)return;try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();var o=AC.createOscillator(),a=AC.createGain();o.type=ty||"sine";o.frequency.setValueAtTime(f,AC.currentTime);if(g)o.frequency.exponentialRampToValueAtTime(g,AC.currentTime+d);a.gain.setValueAtTime(v||.05,AC.currentTime);a.gain.exponentialRampToValueAtTime(.0001,AC.currentTime+d);o.connect(a);a.connect(AC.destination);o.start();o.stop(AC.currentTime+d)}catch(e){}}
+var S={nav:function(){tone(300,.25,"sine",.05,900)},tick:function(){tone(1400,.05,"square",.02)},ok:function(){tone(660,.15,"sine",.06);setTimeout(function(){tone(990,.3,"sine",.06,1320)},120)},pop:function(){tone(500,.1,"triangle",.06,800)}};
+$("snd").onclick=function(){on=!on;try{localStorage.setItem("tcobSnd",on?"1":"0")}catch(e){}$("snd").textContent=on?"🔊":"🔇";S.pop()};
+$("snd").textContent=on?"🔊":"🔇";
+
+var CH="ABCDEFGHIJKLMNOPQRSTUVWXYZƏÖÜŞÇĞ0123456789";
+function flap(el,txt){txt=txt.toUpperCase();el.innerHTML="";txt.split("").forEach(function(c,i){var s=document.createElement("i");s.className=c===" "?"f s":"f";s.textContent=c===" "?"\u00a0":"";el.appendChild(s);if(c===" ")return;var n=0,m=5+i*2,iv=setInterval(function(){s.textContent=n++<m?CH[Math.random()*CH.length|0]:c;if(n>m)clearInterval(iv)},55)})}
+function render(el,str){var k=el.children;if(k.length!==str.length)el.innerHTML=str.split("").map(function(){return'<i class="f"></i>'}).join("");for(var i=0;i<str.length;i++){var c=str[i];if(k[i].textContent!==c){k[i].className=/[:,+]/.test(c)?"f s":"f";k[i].textContent=c;if(!/[:,+]/.test(c)){void k[i].offsetWidth;k[i].classList.add("fl")}}}}
+
+function board(id){var b=$(id);b.innerHTML=TOURS.map(function(t){return'<div class="row"><span class="code">'+t[0]+'</span><span class="ct" data-c="'+t[1]+'"></span><span class="pr" data-p="'+t[2]+' AZN"></span><a class="btn" target="_blank" rel="noopener" href="'+wa("Salam! "+t[1]+" turu ilə maraqlanıram ("+t[2]+" AZN).")+'">Sifariş et</a></div>'}).join("");
+var go=function(){b.querySelectorAll(".ct").forEach(function(e){flap(e,e.dataset.c)});b.querySelectorAll(".pr").forEach(function(e){flap(e,e.dataset.p)})};
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(en){if(en[0].isIntersecting){go();io.disconnect()}},{threshold:.25});io.observe(b)}else go();
+b.onmouseover=function(e){if(e.target.closest(".row"))S.tick()}}
+board("bd");board("bd2");
+$("vip").innerHTML=CFG.vip.map(function(v){return'<div class="vc"><span>'+v[2]+'</span><b>'+v[0]+'</b><small>'+v[1]+'</small></div>'}).join("");
+$("vz").innerHTML=VZ.map(function(v){return'<div class="pass" style="--c:'+v[6]+'"><div class="stamp">'+v[1]+'<br>'+v[2].split(" ")[0]+'</div><h3>'+v[0]+'</h3><p><b>'+v[2]+'</b></p><p>Sənəd: '+v[3]+'</p><p>Rüsum: '+v[4]+'</p><p>Müddət: '+v[5]+'</p><a class="btn" style="margin-top:10px" target="_blank" rel="noopener" href="'+wa("Salam! "+v[0]+" üçün viza dəstəyi sifariş etmək istəyirəm.")+'">Viza dəstəyi sifariş et</a></div>'}).join("");
+$("pt").innerHTML=PT.map(function(p){return'<div class="card"><div class="ini">'+p[0]+'</div><h3 style="font-size:18px">'+p+'</h3><p style="color:var(--mut)">Rəsmi əməkdaşlıq tərəfdaşı</p></div>'}).join("");
+$("tm").innerHTML=TM.map(function(p){return'<div class="card"><div class="ini">'+p[0][0]+'</div><h3 style="font-size:18px">'+p[0]+'</h3><p style="color:var(--mut)">'+p[1]+'</p></div>'}).join("");
+$("mo").innerHTML=MON.map(function(m,i){return'<button data-i="'+i+'">'+m[0]+'</button>'}).join("");
+$("mo").onclick=function(e){var i=e.target.dataset.i;if(i==null)return;S.tick();document.querySelectorAll("#mo button").forEach(function(b){b.classList.toggle("on",b===e.target)});$("mres").innerHTML="<b>"+MON[i][0]+"</b><span>"+MON[i][1]+"</span>"};
+$("ig").href=CFG.ig;$("wa1").href=wa("Salam!");
+$("cp").onclick=function(){try{navigator.clipboard.writeText("+"+CFG.wa)}catch(e){}$("cp").textContent="Kopyalandı";S.ok()};
+render($("cn"),D.length>=500?"500+":String(D.length));
+
+var V=["home","visa","tours","partners","about","contact","advertise"];
+function route(){var h=(location.hash||"#home").slice(1);if(V.indexOf(h)<0)h="home";V.forEach(function(v){$("v-"+v).classList.toggle("on",v===h)});document.querySelectorAll("nav a").forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+h&&!a.classList.contains("lg"))});window.scrollTo(0,0)}
+addEventListener("hashchange",function(){S.nav();route()});route();
+
+$("ch").innerHTML=AD.map(function(a){return'<button class="chip">'+a[1]+" "+a[0]+"</button>"}).join("");
+$("ch").onclick=function(e){if(e.target.classList.contains("chip")){e.target.classList.toggle("on");S.tick()}};
+$("sg").innerHTML=SG.map(function(s,i){return'<button class="seg'+(i==1?" on":"")+'">'+s+"</button>"}).join("");
+$("sg").onclick=function(e){if(e.target.classList.contains("seg")){document.querySelectorAll(".seg").forEach(function(b){b.classList.remove("on")});e.target.classList.add("on");S.pop()}};
+$("open").onclick=function(){$("ov").classList.add("on");S.pop()};
+$("bp").onclick=function(){$("dst").value="Şarm əl-Şeyx";$("ov").classList.add("on");S.pop()};
+var bp=$("bp");bp.onmousemove=function(e){var r=bp.getBoundingClientRect();bp.style.transform="perspective(800px) rotateY("+((e.clientX-r.left)/r.width-.5)*16+"deg) rotateX("+(-((e.clientY-r.top)/r.height-.5))*16+"deg)"};bp.onmouseleave=function(){bp.style.transform=""};
+$("cx").onclick=function(){$("ov").classList.remove("on")};
+$("ov").onclick=function(e){if(e.target===$("ov"))$("ov").classList.remove("on")};
+$("dst").oninput=function(){var q=this.value.trim().toLowerCase();if(q.length<2){$("sug").innerHTML="";return}var r=D.filter(function(d){return d.n.toLowerCase().indexOf(q)>-1}).slice(0,8);$("sug").innerHTML=r.map(function(d){return'<div data-n="'+d.n+'"><span>'+d.n+"</span><span>"+d.t.split("").map(function(c){return'<i class="tag">'+TG[c]+"</i>"}).join("")+"</span></div>"}).join("")};
+$("sug").onclick=function(e){var d=e.target.closest("div[data-n]");if(d){$("dst").value=d.dataset.n;$("sug").innerHTML="";S.tick()}};
+$("send").onclick=function(){var n=$("nm").value.trim(),d=$("dst").value.trim();if(!n||!d){$("send").textContent="Ad və istiqaməti yazın";return}var ex=[].map.call(document.querySelectorAll(".chip.on"),function(c){return c.textContent}).join(", ")||"yoxdur";S.ok();window.open(wa("Salam! Yeni tur sorğusu\nAd: "+n+"\nİstiqamət: "+d+"\nTarix: "+($("dt").value||"təyin edilməyib")+"\nMüddət: "+$("nt").value+"\nXidmətlər: "+ex+"\nSeqment: "+document.querySelector(".seg.on").textContent),"_blank")};
+$("fab").onclick=function(){$("sup").classList.toggle("on");S.pop()};
+$("ss").onclick=function(){var n=$("sn").value.trim(),q=$("sq").value.trim();if(!n||!q)return;S.ok();window.open(wa("Dəstək sorğusu\nAd: "+n+"\nSual: "+q),"_blank")};
+$("as").onclick=function(){var n=$("an").value.trim(),q=$("at").value.trim();if(!n||!q)return;S.ok();window.open(wa("Reklam təklifi\nŞirkət: "+n+"\nMətn: "+q),"_blank")};
+
+var BAD=["axmaq","it oglu","idiot","fuck","shit","bitch","blyat","suka","pidor","sik","amcıq","qəhbə","orospu"];
+function norm(s){return s.toLowerCase().replace(/ə/g,"e").replace(/ı/g,"i").replace(/ö/g,"o").replace(/ü/g,"u").replace(/ş/g,"s").replace(/ç/g,"c").replace(/ğ/g,"g").replace(/[@4]/g,"a").replace(/0/g,"o").replace(/[1!|]/g,"i").replace(/3/g,"e").replace(/\$/g,"s").replace(/[^a-zа-я\s]/g,"").replace(/(.)\1+/g,"$1")}
+function bad(s){var n=norm(s),j=n.replace(/\s/g,"");return BAD.some(function(w){var x=norm(w);return n.indexOf(x)>-1||j.indexOf(x.replace(/\s/g,""))>-1})}
+var R=[];try{R=JSON.parse(localStorage.getItem("tcobRev")||"[]")}catch(e){}
+function esc(s){var d=document.createElement("div");d.textContent=s;return d.innerHTML}
+function drawR(){$("rl").innerHTML=R.map(function(r){return'<div class="rev"><b>'+esc(r[0])+"</b><br>"+esc(r[1])+"</div>"}).join("")}
+drawR();
+$("rs").onclick=function(){var n=$("rn").value.trim(),t=$("rt").value.trim();if(!n||!t)return;if(bad(n+" "+t)){alert("Zəhmət olmasa etik qaydalara riayət edin. Mesajınız təhlükəsizlik filtri tərəfindən bloklandı.");return}R.unshift([n,t]);R=R.slice(0,20);try{localStorage.setItem("tcobRev",JSON.stringify(R))}catch(e){}$("rn").value=$("rt").value="";S.ok();drawR()};
+
+function p2(n){return(n<10?"0":"")+n}
+function cd(){var now=Date.now(),end=CFG.hotStart+Math.ceil((now-CFG.hotStart)/CFG.hotCycle)*CFG.hotCycle,s=Math.max(0,Math.floor((end-now)/1e3));render($("cd"),p2(Math.floor(s/3600))+":"+p2(Math.floor(s%3600/60))+":"+p2(s%60))}
+function st(){var now=Date.now(),v=55420+Math.floor((now-CFG.epoch)/9e4)%1e7,a=Math.round(18+6*Math.sin(now/6e4)+3*Math.sin(now/9e3));try{var m=+localStorage.getItem("tcobV")||0;if(m>v)v=m;localStorage.setItem("tcobV",v)}catch(e){}render($("tv"),v.toLocaleString("en-US")+"+");render($("av"),String(a));}
+cd();st();setInterval(function(){cd();st()},1000);
+})();
+</script>
+</body>
+</html>
